@@ -5,54 +5,54 @@
     Kursiyer Kayıt
 </div>
 
-<form method="post" action="/kurs/kayit">
+<form method="post" asp-action="Kayit">
     <div class="form-group my-2">
-        <label>E-Posta</label>
-        <input name="Eposta" class="form-control">
+        <label asp-for="Eposta"></label>
+        <input asp-for="Eposta" class="form-control">
     </div>
 
     <div class="form-group my-2">
-        <label>İsim</label>
-        <input name="Isim" class="form-control">
+        <label asp-for="Isim"></label>
+        <input asp-for="Isim" class="form-control">
     </div>
 
     <div class="form-group my-2 ">
-        <label>Soyisim</label>
-        <input name="SoyIsim" class="form-control">
+        <label asp-for="SoyIsim"></label>
+        <input asp-for="SoyIsim" class="form-control">
     </div>
 
     <div class="form-group my-2 ">
-        <label>Yaş</label>
-        <select name="Yas" class="form-control">
+        <label asp-for="Yas"></label>
+        <select asp-for="Yas" class="form-control">
             <option value="21">21</option>
             <option value="22">22</option>
             <option value="23">23</option>
             <option value="24">24</option>
             <option value="25">25</option>
-        </select>   
+        </select>
     </div>
 
     <div>
         <fieldset>
             <legend>Bir Kurs Seçiniz</legend>
             <p>
-                <input id="python" type="radio" name="SecilenKurs" value="Python"/>
-                <label>Python</label>           
+                <input id="python" type="radio" asp-for="SecilenKurs" value="Python" />
+                <label>Python</label>
             </p>
             <p>
-                <input id="java" type="radio" name="SecilenKurs" value="Java"/>
-                <label>Java</label>           
+                <input id="java" type="radio" asp-for="SecilenKurs" value="Java" />
+                <label>Java</label>
             </p>
             <p>
-                <input id="swift" type="radio" name="SecilenKurs" value="Swift"/>
-                <label>Swift</label>           
+                <input id="swift" type="radio" asp-for="SecilenKurs" value="Swift" />
+                <label>Swift</label>
             </p>
         </fieldset>
     </div>
 
     <div>
         <button class="btn btn-primary" type="submit">Başvuru Yap</button>
-        <a class="btn btn-warning" href="/">Anasayfa</a>
+        <a class="btn btn-warning" asp-controller="Home" asp-action="Index">Anasayfa</a>
     </div>
-    
+
 </form>
