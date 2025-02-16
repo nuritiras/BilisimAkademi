@@ -23,7 +23,7 @@
 
     <div class="form-group my-2 ">
         <label>Yaş</label>
-        <select name="Yas">
+        <select name="Yas" class="form-control">
             <option value="21">21</option>
             <option value="22">22</option>
             <option value="23">23</option>
@@ -33,7 +33,26 @@
     </div>
 
     <div>
+        <fieldset>
+            <legend>Bir Kurs Seçiniz</legend>
+            <p>
+                <input id="python" type="radio" name="SecilenKurs" value="Python"/>
+                <label>Python</label>           
+            </p>
+            <p>
+                <input id="java" type="radio" name="SecilenKurs" value="Java"/>
+                <label>Java</label>           
+            </p>
+            <p>
+                <input id="swift" type="radio" name="SecilenKurs" value="Swift"/>
+                <label>Swift</label>           
+            </p>
+        </fieldset>
+    </div>
+
+    <div>
         <button class="btn btn-primary" type="submit">Başvuru Yap</button>
+        <a class="btn btn-warning" href="/">Anasayfa</a>
     </div>
     
 </form>
