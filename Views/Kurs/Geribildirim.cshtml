@@ -1,0 +1,16 @@
+@model Aday
+
+<div>
+    <h3 class="display-3">Tebrikler @Model.TamIsim</h3>
+    <p class="lead">Başvurunuz kabul <mark>edildi.</mark> </p>
+    <p class="lead">İlginiz için teşekkür ederiz. </p>
+    <hr>
+    <blockquote class="blockquote">
+        Kayıt olduğunuz kurs: @Model.SecilenKurs 
+    </blockquote>
+    <p class="text-muted">Başvurunuz tarihiniz: @Model.BasvuruZamani </p>
+    <div class="btn-group">
+        <a class="btn btn-outline-success" href="#">Başvurular</a>
+        <a class="btn btn-success" asp-action="Index" asp-controller="Home">Anasayfa</a>
+    </div>
+</div>

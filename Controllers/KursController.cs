@@ -20,7 +20,7 @@ namespace BilisimAkademi.Controllers
         public IActionResult Kayit([FromForm] Aday model)
         {
             Depo.Ekle(model);
-            return Redirect("/");
+            return View("Geribildirim",model);
         }
     }
 }
