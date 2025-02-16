@@ -14,5 +14,12 @@ namespace BilisimAkademi.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Kayit([FromForm] Aday model)
+        {
+            return View();
+        }
     }
 }
