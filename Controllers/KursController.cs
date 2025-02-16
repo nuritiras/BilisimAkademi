@@ -19,7 +19,8 @@ namespace BilisimAkademi.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Kayit([FromForm] Aday model)
         {
-            return View();
+            Depo.Ekle(model);
+            return Redirect("/");
         }
     }
 }
