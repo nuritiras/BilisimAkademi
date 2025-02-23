@@ -1,5 +1,34 @@
-@{
-    ViewData["Title"] = "Privacy Policy";
-}
+@model IEnumerable<Aday>
 
-Kurs
+@if(Model.Count()>0)
+{
+    <h6 class="display-6">
+        Başvurular
+    </h6>
+    <table class="table table-hover table-striped">
+        <thead>
+            <th>E-Posta</th>
+            <th>Tam İsim</th>
+            <th>Başcuru Tarihi</th>
+            <th>Kurs Bilgileri</th>
+        </thead>
+        <tbody>
+            @foreach (Aday aday in Model)
+            {
+                <tr>
+                    <td>@aday.Eposta</td>
+                    <td>@aday.TamIsim</td>
+                    <td>@aday.BasvuruZamani</td>
+                    <td>@aday.SecilenKurs</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+} 
+else
+{
+    <div class="alert alert-info">
+        Herhangi bir başvuru bulunamadı.Lütfen buraya 
+        <a class="alert-link" asp-action="Kayit">tıklayınız</a>.
+    </div>
+}
